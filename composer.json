@@ -1,0 +1,14 @@
+{
+  "name": "corviz/br-gpdpl",
+  "description": "A lib that provides a series of data anonymizers, compliant with brazilian General Personal Data Protection Law (aka LGPD, in pt-br)",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Corviz\\BrGpdpl\\": "./src"
+    }
+  }
+}
