@@ -12,7 +12,7 @@ class CpfAnonymizerTest extends TestCase
     {
         $this->assertEquals(
             '111.***.***-**',
-            (new CpfAnonymizer("111.111.111-11"))->anonymized()
+            (new CpfAnonymizer('111.111.111-11'))->anonymized()
         );
     }
 
@@ -20,7 +20,7 @@ class CpfAnonymizerTest extends TestCase
     {
         $this->assertEquals(
             '111********',
-            (new CpfAnonymizer("11111111111"))->anonymized()
+            (new CpfAnonymizer('11111111111'))->anonymized()
         );
     }
 

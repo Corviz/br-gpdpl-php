@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Corviz\BrGpdpl\Anonymizer;
-
 
 use Corviz\BrGpdpl\Anonymizer;
 
@@ -13,7 +11,7 @@ class CpfAnonymizer extends Anonymizer
      */
     protected static function getPattern(): string
     {
-        return "/^([0-9]{3})(\\.?)[0-9]{3}(\\.?)[0-9]{3}(-?)[0-9]{2}$/";
+        return '/^([0-9]{3})(\\.?)[0-9]{3}(\\.?)[0-9]{3}(-?)[0-9]{2}$/';
     }
 
     /**

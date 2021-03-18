@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Corviz\BrGpdpl;
-
 
 use Exception;
 
@@ -21,21 +19,22 @@ abstract class Anonymizer
     /**
      * @return string
      */
-    protected static abstract function getPattern() : string;
+    abstract protected static function getPattern(): string;
 
     /**
      * @param string $original
+     *
      * @return bool
      */
-    public static function matches(string $original) : bool
+    public static function matches(string $original): bool
     {
-        return !!preg_match(static::getPattern(), $original);
+        return (bool) preg_match(static::getPattern(), $original);
     }
 
     /**
      * @return string
      */
-    public function anonymized() : string
+    public function anonymized(): string
     {
         if (!isset($this->anonymous)) {
             $this->anonymous = $this->anonymize($this->original, static::getPattern());
@@ -47,7 +46,7 @@ abstract class Anonymizer
     /**
      * @return string
      */
-    public function original() : string
+    public function original(): string
     {
         return $this->original;
     }
@@ -55,12 +54,14 @@ abstract class Anonymizer
     /**
      * @param string $original
      * @param string $pattern
+     *
      * @return string
      */
-    protected abstract function anonymize(string $original, string $pattern) : string;
+    abstract protected function anonymize(string $original, string $pattern): string;
 
     /**
      * Anonymizer constructor.
+     *
      * @param string $original
      */
     public function __construct(string $original)
