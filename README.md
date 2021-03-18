@@ -2,7 +2,7 @@
 
 This lib provides a series of data anonymizer classes, compliant with brazilian General Personal Data Protection Law (aka LGPD, in pt-br)
 
-[![StyleCI](https://styleci.io/repos/55434624/shield)](https://styleci.io/repos/55434624)
+[![StyleCI](https://styleci.io/repos/55434624/shield)](https://styleci.io/repos/348778629)
 
 ## What is GPDPL (or LGPD)?
 
