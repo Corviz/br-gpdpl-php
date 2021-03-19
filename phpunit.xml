@@ -5,8 +5,6 @@
     convertErrorsToExceptions="true"
     convertNoticesToExceptions="true"
     convertWarningsToExceptions="true"
-    stopOnFailures="false"
-    syntaxCheck="false"
     >
     <testsuites>
         <testsuite name="Framework test suite">
