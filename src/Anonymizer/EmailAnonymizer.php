@@ -1,20 +1,17 @@
 <?php
 
-
 namespace Corviz\BrGpdpl\Anonymizer;
-
 
 use Corviz\BrGpdpl\Anonymizer;
 
 class EmailAnonymizer extends Anonymizer
 {
-
     /**
      * @inheritDoc
      */
     protected static function getPattern(): string
     {
-        return "/^([a-z]).+@(.+\\..+)+$/";
+        return '/^([a-z]).+@(.+\\..+)+$/';
     }
 
     /**

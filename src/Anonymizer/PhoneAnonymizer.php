@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Corviz\BrGpdpl\Anonymizer;
-
 
 use Corviz\BrGpdpl\Anonymizer;
 
