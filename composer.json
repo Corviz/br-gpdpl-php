@@ -13,5 +13,9 @@
     "psr-4": {
       "Corviz\\BrGpdpl\\": "./src"
     }
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit",
+    "test-w": ".\\vendor\\bin\\phpunit"
   }
 }
