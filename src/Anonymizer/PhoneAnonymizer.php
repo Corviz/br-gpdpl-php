@@ -31,8 +31,6 @@ class PhoneAnonymizer extends Anonymizer
             $match = preg_replace('/\d/', '*', $match);
         }
 
-
-
         return $ddi.implode('', $matches).$lastNumbers;
     }
 }

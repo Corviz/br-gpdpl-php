@@ -6,7 +6,6 @@ use Corviz\BrGpdpl\Anonymizer;
 
 class CreditCardNumberAnonymizer extends Anonymizer
 {
-
     /**
      * @inheritDoc
      */
@@ -20,6 +19,6 @@ class CreditCardNumberAnonymizer extends Anonymizer
      */
     protected function anonymize(string $original, string $pattern): string
     {
-        return preg_replace($pattern,'$1**$3****$4', $original);
+        return preg_replace($pattern, '$1**$3****$4', $original);
     }
 }
