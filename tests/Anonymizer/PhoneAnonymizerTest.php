@@ -11,7 +11,7 @@ class PhoneAnonymizerTest extends TestCase
     public function testPhoneMaskWithoutRegion()
     {
         $this->assertEquals(
-            '******-1234',
+            '****-1234',
             (new PhoneAnonymizer('3000-1234'))->anonymized()
         );
     }
@@ -19,7 +19,7 @@ class PhoneAnonymizerTest extends TestCase
     public function testCelphoneMaskWithoutRegion()
     {
         $this->assertEquals(
-            '******-1234',
+            '*****-1234',
             (new PhoneAnonymizer('90000-1234'))->anonymized()
         );
     }
@@ -35,15 +35,23 @@ class PhoneAnonymizerTest extends TestCase
     public function testCelphoneMaskDdi()
     {
         $this->assertEquals(
-            '+55 ** ****-5678',
+            '+55 ** *****-5678',
             (new PhoneAnonymizer('+55 11 91234-5678'))->anonymized()
+        );
+    }
+
+    public function testUsPhoneNumber()
+    {
+        $this->assertEquals(
+            '+1 (***) ***-2671',
+            (new PhoneAnonymizer('+1 (415) 555-2671'))->anonymized()
         );
     }
 
     public function testCelphoneMaskDdiDigitsonly()
     {
         $this->assertEquals(
-            '+55******5678',
+            '+551******5678',
             (new PhoneAnonymizer('+5511912345678'))->anonymized()
         );
     }

@@ -11,7 +11,7 @@ class PhoneAnonymizer extends Anonymizer
      */
     protected static function getPattern(): string
     {
-        return '/^((\+\d{2})?( ?)(\(?)(\d{2})(\)?)( ?))?(\d{4,5})(-?)(\d{4})$/';
+        return '/^((\+\d{1,3})?( ?)(\(?)(\d+)(\)?)( ?))?(\d+)(-?)(\d{4})$/';
     }
 
     /**
@@ -19,6 +19,20 @@ class PhoneAnonymizer extends Anonymizer
      */
     protected function anonymize(string $original, string $pattern): string
     {
-        return preg_replace($pattern, '$2$3$4**$6$7****$9$10', $original);
+        $matches = [];
+        preg_match($pattern, $original, $matches);
+
+        $ddi = $matches[2];
+        $lastNumbers = $matches[10];
+        unset($matches[0], $matches[1], $matches[2], $matches[10]);
+
+        //preg_replace('/\d/', '*', $matches);
+        foreach ($matches as &$match) {
+            $match = preg_replace('/\d/', '*', $match);
+        }
+
+
+
+        return $ddi.implode('', $matches).$lastNumbers;
     }
 }
