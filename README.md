@@ -54,4 +54,4 @@ $anonymizer = new CreditCardNumberAnonymizer($cardNumber);
 echo $anonymizer->anonymized(); //1234 56** **** 3456
 ```
 
-[See complete lists of examples...](https://github.com/Corviz/br-gpdpl-php/wiki)
+[See complete list of examples...](https://github.com/Corviz/br-gpdpl-php/wiki)
