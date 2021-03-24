@@ -19,8 +19,39 @@ Further information can be found at: https://en.wikipedia.org/wiki/General_Perso
 
 ## Installation
 
-//TODO
+Installing via composer CLI:
+```
+composer require corviz/br-gpdpl-php
+```
+
+Or add the following to your composer.json
+
+```
+{
+  "require": {
+    "corviz/br-gpdpl-php": "1.*"
+  }
+}
+```
 
 ## Usage examples
 
-//TODO
+```php
+use Corviz\BrGpdpl\Anonymizer\GenericAnonymizer;
+
+$text = 'my content';
+$anonymizer = new GenericAnonymizer($text);
+
+echo $anonymizer->anonymized(); //**********
+```
+
+```php
+use Corviz\BrGpdpl\Anonymizer\CreditCardNumberAnonymizer;
+
+$cardNumber = '1234 5678 9012 3456';
+$anonymizer = new CreditCardNumberAnonymizer($cardNumber);
+
+echo $anonymizer->anonymized(); //1234 56** **** 3456
+```
+
+[See complete lists of examples...](https://github.com/Corviz/br-gpdpl-php/wiki)
