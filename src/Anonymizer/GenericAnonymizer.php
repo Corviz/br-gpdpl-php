@@ -43,8 +43,8 @@ class GenericAnonymizer extends Anonymizer
      * GenericAnonymizer constructor.
      *
      * @param string $original
-     * @param int    $keepAtStart
-     * @param int    $keepAtEnd
+     * @param int $keepAtStart
+     * @param int $keepAtEnd
      *
      * @throws Exception
      */
