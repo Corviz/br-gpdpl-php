@@ -26,7 +26,6 @@ class PhoneAnonymizer extends Anonymizer
         $lastNumbers = $matches[10];
         unset($matches[0], $matches[1], $matches[2], $matches[10]);
 
-        //preg_replace('/\d/', '*', $matches);
         foreach ($matches as &$match) {
             $match = preg_replace('/\d/', '*', $match);
         }
