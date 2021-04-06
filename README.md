@@ -4,6 +4,7 @@ This lib provides a series of data anonymizer classes, compliant with brazilian 
 
 [![StyleCI](https://github.styleci.io/repos/348778629/shield?branch=main)](https://github.styleci.io/repos/348778629?branch=main)
 [![Build Status](https://travis-ci.org/Corviz/br-gpdpl-php.svg?branch=main)](https://travis-ci.org/Corviz/br-gpdpl-php)
+[![PHP Composer](https://github.com/Corviz/br-gpdpl-php/actions/workflows/php.yml/badge.svg)](https://github.com/Corviz/br-gpdpl-php/actions/workflows/php.yml)
 
 ## What is GPDPL (or LGPD)?
 
