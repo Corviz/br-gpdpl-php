@@ -22,7 +22,7 @@ Further information can be found at: https://en.wikipedia.org/wiki/General_Perso
 
 Installing via composer CLI:
 ```
-composer require corviz/br-gpdpl-php
+composer require corviz/br-gpdpl
 ```
 
 Or add the following to your composer.json
@@ -30,7 +30,7 @@ Or add the following to your composer.json
 ```
 {
   "require": {
-    "corviz/br-gpdpl-php": "1.*"
+    "corviz/br-gpdpl": "1.*"
   }
 }
 ```
