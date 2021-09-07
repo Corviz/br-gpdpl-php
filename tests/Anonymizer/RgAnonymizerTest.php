@@ -23,6 +23,24 @@ class RgAnonymizerTest extends TestCase
             (new RgAnonymizer('123456780'))->anonymized()
         );
     }
+    
+    public function testTrailingX()
+    {
+        $this->assertEquals(
+            '12.345.***-*',
+            (new RgAnonymizer('12.345.678-X'))->anonymized()
+        );
+        
+        $this->assertEquals(
+            '12.345.***-*',
+            (new RgAnonymizer('12.345.678-x'))->anonymized()
+        );
+        
+        $this->assertEquals(
+            '12345****',
+            (new RgAnonymizer('12345678X'))->anonymized()
+        );
+    }
 
     public function testInvalidValue()
     {
