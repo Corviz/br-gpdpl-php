@@ -11,7 +11,7 @@ class RgAnonymizer extends Anonymizer
      */
     protected static function getPattern(): string
     {
-        return '/^([0-9]{2})(\\.?)([0-9]{3})(\\.?)[0-9]{3}(-?)[0-9]$/';
+        return '/^([0-9]{2})(\\.?)([0-9]{3})(\\.?)[0-9]{3}(-?)[0-9xX]$/';
     }
 
     /**
